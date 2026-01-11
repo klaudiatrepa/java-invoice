@@ -23,10 +23,16 @@ public abstract class Product {
     }
 
     public BigDecimal getPrice() {
+        if (this.price == null) {
+            return BigDecimal.ZERO;
+        }
         return this.price;
     }
 
     public BigDecimal getTaxPercent() {
+        if (this.taxPercent == null) {
+            return BigDecimal.ZERO;
+        }
         return this.taxPercent;
     }
 
