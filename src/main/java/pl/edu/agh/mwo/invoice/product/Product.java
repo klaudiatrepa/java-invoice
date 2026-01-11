@@ -11,7 +11,7 @@ public abstract class Product {
 
     protected Product(String name, BigDecimal price, BigDecimal tax) {
         if (name == null || name.isEmpty() || price == null || price.compareTo(BigDecimal.ZERO) < 0) {
-            throw new IllegalArgumentException("Name can't be null");
+            throw new IllegalArgumentException("Name and price can't be empty. Price must be a positive value.");
         }
         this.name = name;
         this.price = price;
